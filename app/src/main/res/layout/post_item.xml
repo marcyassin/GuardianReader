@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/darkblue"
+        android:gravity="center"
+        android:tag="Bottom3"
+        android:id="@+id/linearLayout"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/save_button"
+            android:layout_width="@dimen/bottom_slide_layout_icon"
+            android:layout_height="@dimen/bottom_slide_layout_icon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_star_rate_white_18dp" />
+
+
+        <ImageView
+            android:id="@+id/hide_button"
+            android:layout_width="@dimen/bottom_slide_layout_icon"
+            android:layout_height="@dimen/bottom_slide_layout_icon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cancel_white_18dp" />
+
+        <ImageView
+            android:id="@+id/mark_read_button"
+            android:layout_width="@dimen/bottom_slide_layout_icon"
+            android:layout_height="@dimen/bottom_slide_layout_icon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_remove_red_eye_white_18dp" />
+
+        <ImageView
+            android:id="@+id/open_in_browser"
+            android:layout_width="@dimen/bottom_slide_layout_icon"
+            android:layout_height="@dimen/bottom_slide_layout_icon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_open_in_browser_white_18dp"/>
+
+        <ImageView
+            android:id="@+id/share_button"
+            android:layout_width="@dimen/bottom_slide_layout_icon"
+            android:layout_height="@dimen/bottom_slide_layout_icon"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share_white_18dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/postTitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginLeft="10dp"
+            android:text="This blah "
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/postThumb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/postDateLabel"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="April 12, 2013"
+            android:textSize="12sp"
+
+            android:layout_below="@+id/postTitleLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/postLinkUrl"/>
+
+
+        <ImageView
+            android:id="@+id/postThumb"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_android_black_24dp"
+            android:scaleType="centerCrop"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>
